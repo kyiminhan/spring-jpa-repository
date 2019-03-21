@@ -67,6 +67,7 @@ public class Employee implements Serializable {
 	/** The id. */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private Integer id;
 
 	/** The name. */
