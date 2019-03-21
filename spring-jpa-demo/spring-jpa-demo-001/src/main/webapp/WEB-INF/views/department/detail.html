@@ -29,8 +29,7 @@
 	<main role="main" class="container">
 	<div class="jumbotron"
 		style="height: 100vh; padding-top: 8rem; margin-bottom: 0px;">
-		<form th:action="@{/department/__${department.id}__/edit}"
-			th:method="post" th:object="${department}">
+		<form th:method="get" th:object="${department}">
 			<div class="row justify-content-center">
 				<div class="col-md-9">
 					<div class="row justify-content-center">
@@ -40,9 +39,10 @@
 									<span class="input-group-text mr-2 fas fa-building"
 										id="basic-addon1"></span>
 								</div>
-								<input type="text" class="form-control" th:field="*{departmentName}"
-									placeholder="Employee Name" aria-label="departmentName"
-									aria-describedby="basic-addon1" readonly="readonly">
+								<input type="text" class="form-control"
+									th:field="*{departmentName}" placeholder="Employee Name"
+									aria-label="departmentName" aria-describedby="basic-addon1"
+									readonly="readonly">
 							</div>
 						</div>
 					</div>

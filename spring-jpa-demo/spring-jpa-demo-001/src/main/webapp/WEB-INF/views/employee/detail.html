@@ -29,8 +29,7 @@
 	<main role="main" class="container">
 	<div class="jumbotron"
 		style="height: 100vh; padding-top: 8rem; margin-bottom: 0px;">
-		<form th:action="@{/employee/__${employee.id}__/edit}"
-			th:method="post" th:object="${employee}">
+		<form th:method="get" th:object="${employee}">
 			<div class="row justify-content-center">
 				<div class="col-md-9">
 					<div class="row justify-content-center">
