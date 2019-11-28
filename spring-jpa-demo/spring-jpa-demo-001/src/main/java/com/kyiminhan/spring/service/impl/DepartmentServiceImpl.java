@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.kyiminhan.spring.common.types.Status;
 import com.kyiminhan.spring.dao.DepartmentDao;
 import com.kyiminhan.spring.entity.Department;
 import com.kyiminhan.spring.service.DepartmentService;
@@ -45,6 +46,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	 */
 	@Override
 	public void save(final Department department) {
+		department.setStatus(Status.ACTIVE);
 		this.departmentDao.save(department);
 	}
 
@@ -57,6 +59,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	 */
 	@Override
 	public void update(final Department department) {
+		department.setStatus(Status.ACTIVE);
 		this.departmentDao.update(department);
 	}
 
@@ -69,7 +72,9 @@ public class DepartmentServiceImpl implements DepartmentService {
 	 */
 	@Override
 	public void delete(final Department department) {
-		this.departmentDao.delete(department);
+		department.setStatus(Status.INACTIVE);
+		// this.departmentDao.delete(department);
+		this.departmentDao.update(department);
 	}
 
 	/*

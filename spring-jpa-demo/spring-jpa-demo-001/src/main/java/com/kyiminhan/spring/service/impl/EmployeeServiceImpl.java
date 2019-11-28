@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.kyiminhan.spring.common.types.Status;
 import com.kyiminhan.spring.dao.EmployeeDao;
 import com.kyiminhan.spring.entity.Employee;
 import com.kyiminhan.spring.service.EmployeeService;
@@ -48,6 +49,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	 */
 	@Override
 	public void save(final Employee employee) {
+		employee.setStatus(Status.ACTIVE);
 		this.employeeDao.save(employee);
 	}
 
@@ -60,6 +62,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	 */
 	@Override
 	public void update(final Employee employee) {
+		employee.setStatus(Status.ACTIVE);
 		this.employeeDao.save(employee);
 	}
 
@@ -72,7 +75,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	 */
 	@Override
 	public void delete(final Employee employee) {
-		this.employeeDao.delete(employee);
+		employee.setStatus(Status.INACTIVE);
+		// this.employeeDao.delete(employee);
+		this.employeeDao.save(employee);
 	}
 
 	/*

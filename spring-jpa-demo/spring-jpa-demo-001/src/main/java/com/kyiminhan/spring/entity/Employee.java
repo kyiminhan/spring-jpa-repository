@@ -4,9 +4,15 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Where;
+
+import com.kyiminhan.spring.common.types.Status;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -59,6 +65,7 @@ import lombok.Setter;
  */
 @AllArgsConstructor
 @Entity
+@Where(clause = "status='ACTIVE'")
 public class Employee implements Serializable {
 
 	/** The Constant serialVersionUID. */
@@ -86,4 +93,8 @@ public class Employee implements Serializable {
 	@Column
 	private String phone;
 
+	/** The Status status. */
+	@Enumerated(EnumType.STRING)
+	@Column
+	private Status status;
 }
