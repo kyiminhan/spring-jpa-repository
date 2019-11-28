@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kyiminhan.spring.common.types.Status;
+import com.kyiminhan.common.types.Status;
 import com.kyiminhan.spring.dao.DepartmentDao;
 import com.kyiminhan.spring.entity.Department;
 import com.kyiminhan.spring.service.DepartmentService;

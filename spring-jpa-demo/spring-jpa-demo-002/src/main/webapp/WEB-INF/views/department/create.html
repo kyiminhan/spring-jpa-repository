@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="icon"
+	href="https://getbootstrap.com/docs/4.3/assets/img/favicons/favicon-32x32.png"
+	sizes="32x32" type="image/png">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Material Design for Bootstrap fonts and icons -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+<!-- Material Design for Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+	integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<title>Department Create</title>
+</head>
+<body>
+	<header th:replace="common/navbar.html :: navbar"> </header>
+	<main role="main" class="container">
+	<div class="jumbotron"
+		style="height: 100vh; padding-top: 8rem; margin-bottom: 0px;">
+		<form th:action="@{/department/create}" th:method="post"
+			th:object="${department}">
+			<div class="row justify-content-center">
+				<div class="col-md-9">
+					<div class="row justify-content-center">
+						<div class="col-md-6">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text mr-2 fas fa-building"
+										id="basic-addon1"></span>
+								</div>
+								<input type="text" class="form-control" th:field="*{departmentName}"
+									placeholder="Department Name" aria-label="departmentName"
+									aria-describedby="basic-addon1" required="required">
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<a class="btn btn-sm btn-outline-success mt-4 mr-2 col-md-2"
+							th:href="@{/department/list}">Cancel</a>
+						<button type="submit"
+							class="btn btn-sm btn-outline-success mt-4 ml-2 col-md-2">Save</button>
+					</div>
+
+				</div>
+			</div>
+		</form>
+	</div>
+	</main>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+		integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+		integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+		crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			$('body').bootstrapMaterialDesign();
+		});
+	</script>
+</body>
+</html>

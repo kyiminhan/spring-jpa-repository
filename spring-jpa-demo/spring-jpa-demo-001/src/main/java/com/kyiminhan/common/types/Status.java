@@ -1,4 +1,4 @@
-package com.kyiminhan.spring.common.types;
+package com.kyiminhan.common.types;
 
 /**
  * The Class Status.</BR>

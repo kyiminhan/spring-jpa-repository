@@ -12,7 +12,7 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.Where;
 
-import com.kyiminhan.spring.common.types.Status;
+import com.kyiminhan.common.types.Status;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

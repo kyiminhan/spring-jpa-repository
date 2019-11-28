@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kyiminhan.spring.common.types.Status;
+import com.kyiminhan.common.types.Status;
 import com.kyiminhan.spring.dao.EmployeeDao;
 import com.kyiminhan.spring.entity.Employee;
 import com.kyiminhan.spring.service.EmployeeService;

@@ -16,20 +16,19 @@ import com.kyiminhan.common.types.Status;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The Class Employee.</BR>
+ * The Class Department.<BR>
  *
- * @author KYIMINHAN </BR>
- * @version 1.0 </BR>
- * @since Mar 17, 2019 </BR>
- *        spring-jpa-demo-001 system </BR>
- *        com.kyiminhan.spring.entity </BR>
- *        Employee.java </BR>
+ * @author KYIMINHAN <BR>
+ * @version 1.0 <BR>
+ * @since Nov 28, 2019 <BR>
+ * spring-jpa-demo-002 system <BR>
+ * com.kyiminhan.spring.entity <BR>
+ * Department.java <BR>
  */
 @Getter
 @Setter
@@ -37,36 +36,61 @@ import lombok.Setter;
 /**
  * Builds the.
  *
- * @return Employee
+ * @return Department
+ */
+
+/**
+ * To string.
+ *
+ * @return the java.lang. string
+ */
+
+/**
+ * To string.
+ *
+ * @return the java.lang. string
  */
 @Builder
 
 /**
- * Can equal.
- *
- * @param other the other
- * @return true, if successful
+ * Instantiates a new department.
  */
-@EqualsAndHashCode
 
 /**
- * Instantiates a new employee.
+ * Instantiates a new department.
+ */
+
+/**
+ * Instantiates a new department.
  */
 @NoArgsConstructor
 
 /**
- * Instantiates a new employee.
+ * Instantiates a new department.
  *
- * @param id      the id
- * @param name    the name
- * @param email   the email
- * @param address the address
- * @param phone   the phone
+ * @param id             the id
+ * @param departmentName the department name
+ */
+
+/**
+ * Instantiates a new department.
+ *
+ * @param id the id
+ * @param departmentName the department name
+ * @param status the status
+ */
+
+/**
+ * Instantiates a new department.
+ *
+ * @param id the id
+ * @param departmentName the department name
+ * @param status the status
  */
 @AllArgsConstructor
 @Entity
 @Where(clause = "status='ACTIVE'")
-public class Employee implements Serializable {
+public class Department implements Serializable {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
@@ -77,23 +101,11 @@ public class Employee implements Serializable {
 	@Column
 	private Integer id;
 
-	/** The name. */
+	/** The department name. */
 	@Column
-	private String name;
+	private String departmentName;
 
-	/** The email. */
-	@Column
-	private String email;
-
-	/** The address. */
-	@Column
-	private String address;
-
-	/** The phone. */
-	@Column
-	private String phone;
-
-	/** The Status status. */
+	/** The status. */
 	@Enumerated(EnumType.STRING)
 	@Column
 	private Status status;

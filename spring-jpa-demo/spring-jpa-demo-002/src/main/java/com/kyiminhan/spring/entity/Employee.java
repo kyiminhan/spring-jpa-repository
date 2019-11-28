@@ -22,14 +22,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The Class Employee.</BR>
+ * The Class Employee.<BR>
  *
- * @author KYIMINHAN </BR>
- * @version 1.0 </BR>
- * @since Mar 17, 2019 </BR>
- *        spring-jpa-demo-001 system </BR>
- *        com.kyiminhan.spring.entity </BR>
- *        Employee.java </BR>
+ * @author KYIMINHAN <BR>
+ * @version 1.0 <BR>
+ * @since Nov 28, 2019 <BR>
+ * spring-jpa-demo-002 system <BR>
+ * com.kyiminhan.spring.entity <BR>
+ * Employee.java <BR>
  */
 @Getter
 @Setter
@@ -39,6 +39,18 @@ import lombok.Setter;
  *
  * @return Employee
  */
+
+/**
+ * To string.
+ *
+ * @return the java.lang. string
+ */
+
+/**
+ * To string.
+ *
+ * @return the java.lang. string
+ */
 @Builder
 
 /**
@@ -47,7 +59,27 @@ import lombok.Setter;
  * @param other the other
  * @return true, if successful
  */
+
+/**
+ * Hash code.
+ *
+ * @return the int
+ */
+
+/**
+ * Hash code.
+ *
+ * @return the int
+ */
 @EqualsAndHashCode
+
+/**
+ * Instantiates a new employee.
+ */
+
+/**
+ * Instantiates a new employee.
+ */
 
 /**
  * Instantiates a new employee.
@@ -62,6 +94,28 @@ import lombok.Setter;
  * @param email   the email
  * @param address the address
  * @param phone   the phone
+ */
+
+/**
+ * Instantiates a new employee.
+ *
+ * @param id the id
+ * @param name the name
+ * @param email the email
+ * @param address the address
+ * @param phone the phone
+ * @param status the status
+ */
+
+/**
+ * Instantiates a new employee.
+ *
+ * @param id the id
+ * @param name the name
+ * @param email the email
+ * @param address the address
+ * @param phone the phone
+ * @param status the status
  */
 @AllArgsConstructor
 @Entity
@@ -93,7 +147,7 @@ public class Employee implements Serializable {
 	@Column
 	private String phone;
 
-	/** The Status status. */
+	/** The status. */
 	@Enumerated(EnumType.STRING)
 	@Column
 	private Status status;
