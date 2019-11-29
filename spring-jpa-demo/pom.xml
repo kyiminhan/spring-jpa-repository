@@ -9,6 +9,7 @@
 	<modules>
 		<module>spring-jpa-demo-001</module>
 		<module>spring-jpa-demo-002</module>
+		<module>spring-jpa-demo-003</module>
 	</modules>
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
