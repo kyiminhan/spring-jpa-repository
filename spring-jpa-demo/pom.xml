@@ -36,7 +36,7 @@
 		<lombok.version>1.18.6</lombok.version>
 		<logback.version>1.2.3</logback.version>
 		<slf4j.version>1.7.25</slf4j.version>
-		<mysql-connector.version>8.0.15</mysql-connector.version>
+		<mysql-connector.version>8.0.16</mysql-connector.version>
 		<common-dbcp2.version>2.6.0</common-dbcp2.version>
 		<!-- javax mail version -->
 		<java.version>1.8</java.version>
