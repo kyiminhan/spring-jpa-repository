@@ -28,7 +28,7 @@
 		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
 		<!-- spring framework and spring security version -->
 		<spring.version>5.1.5.RELEASE</spring.version>
-		<spring.secrity.version>5.1.5.RELEASE</spring.secrity.version>
+		<spring.secrity.version>5.5.7</spring.secrity.version>
 		<spring-data-jpa.version>2.1.8.RELEASE</spring-data-jpa.version>
 		<hibernate.version>5.4.1.Final</hibernate.version>
 		<aspectj.version>1.9.2</aspectj.version>
